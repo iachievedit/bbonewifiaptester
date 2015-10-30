@@ -1,8 +1,7 @@
-root@beaglebone:~# cat /etc/systemd/system/speedtest.service 
 [Unit]
 Description=Speedtest
-Wants=NetworkManager-wait-online.service
-After=NetworkManager-wait-online.service
+Wants=network-online.service
+After=network-online.service
 
 [Service]
 Type=forking
@@ -10,4 +9,3 @@ ExecStart=/root/bbonewifiaptester/speedtest.pl
 
 [Install]
 WantedBy=multi-user.target
-

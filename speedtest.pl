@@ -6,7 +6,7 @@ use Proc::Daemon;
 use Net::Int::Stats;
 use Net::Ifconfig::Wrapper;
 
-# Proc::Daemon::Init;
+Proc::Daemon::Init;
 
 off();
 
@@ -56,7 +56,7 @@ sub stats {
 green();
 
 # Our log file
-open our $LOG, ">>", "/root/speedtest.log" or die;
+open our $LOG, ">>", "/var/log/speedtest.log" or die;
 sub logmsg {
   my $msg = shift;
   my $time = localtime;
