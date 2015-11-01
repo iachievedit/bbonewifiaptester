@@ -1,11 +1,11 @@
 [Unit]
-Description=Speedtest
+Description=BeagleBone Wifi AP Tester
 Wants=network-online.service
 After=network-online.service
 
 [Service]
 Type=forking
-ExecStart=/root/bbonewifiaptester/speedtest.pl
+ExecStart=/usr/local/bin/bbwifiaptest.pl
 
 [Install]
 WantedBy=multi-user.target
